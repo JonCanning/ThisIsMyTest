@@ -4,8 +4,7 @@ namespace App
 {
     public class CreateUser
     {
-        public CreateUser(string title, string firstname, string surname, DateTime dateOfBirth, string email,
-            string telephoneNumber, Address address)
+        public CreateUser(string title, string firstname, string surname, DateTime dateOfBirth, string email, string telephoneNumber, Address address)
         {
             Title = title;
             Firstname = firstname;
