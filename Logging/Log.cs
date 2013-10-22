@@ -1,6 +1,4 @@
-﻿using NLog;
-
-namespace Logging
+﻿namespace Logging
 {
     public class Log : ILog
     {

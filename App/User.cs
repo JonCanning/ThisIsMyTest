@@ -4,8 +4,15 @@ namespace App
 {
     public class User
     {
-        public User(string title, string firstname, string surname, DateTime dateOfBirth, string email,
-            string telephoneNumber, Address address, string reference)
+        public User(
+            string title,
+            string firstname,
+            string surname,
+            DateTime dateOfBirth,
+            string email,
+            string telephoneNumber,
+            Address address,
+            string reference)
         {
             Address = address;
             Title = title;

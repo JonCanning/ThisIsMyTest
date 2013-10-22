@@ -9,8 +9,7 @@ namespace App
         readonly IUserReferenceGenerator userReferenceGenerator;
         readonly IUserRepository userRepository;
 
-        public UserHandler(IUserRepository userRepository, IUserCreator userCreator,
-            IUserReferenceGenerator userReferenceGenerator)
+        public UserHandler(IUserRepository userRepository, IUserCreator userCreator, IUserReferenceGenerator userReferenceGenerator)
         {
             this.userRepository = userRepository;
             this.userCreator = userCreator;
@@ -23,11 +22,18 @@ namespace App
             if (user != null)
             {
                 Log.Info("User {0} already exists", createUser.Email);
-                return;
+                throw new UserExistsException(createUser.Email);
             }
             var userReference = userReferenceGenerator.Generate(createUser);
-            userCreator.Create(createUser.Title, createUser.Firstname, createUser.Surname, createUser.DateOfBirth,
-                createUser.Email, createUser.TelephoneNumber, createUser.Address, userReference);
+            userCreator.Create(
+                createUser.Title,
+                createUser.Firstname,
+                createUser.Surname,
+                createUser.DateOfBirth,
+                createUser.Email,
+                createUser.TelephoneNumber,
+                createUser.Address,
+                userReference);
         }
     }
 }
