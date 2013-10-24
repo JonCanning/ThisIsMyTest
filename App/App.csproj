@@ -39,7 +39,6 @@
     <Compile Include="CreateUser.cs" />
     <Compile Include="IHandle.cs" />
     <Compile Include="IUserCreator.cs" />
-    <Compile Include="IUserReferenceGenerator.cs" />
     <Compile Include="IUserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserExistsException.cs" />

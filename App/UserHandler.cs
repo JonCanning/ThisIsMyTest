@@ -6,10 +6,10 @@ namespace App
     {
         static readonly ILog Log = LogProvider.GetLogger();
         readonly IUserCreator userCreator;
-        readonly IUserReferenceGenerator userReferenceGenerator;
+        readonly UserReferenceGenerator userReferenceGenerator;
         readonly IUserRepository userRepository;
 
-        public UserHandler(IUserRepository userRepository, IUserCreator userCreator, IUserReferenceGenerator userReferenceGenerator)
+        public UserHandler(IUserRepository userRepository, IUserCreator userCreator, UserReferenceGenerator userReferenceGenerator)
         {
             this.userRepository = userRepository;
             this.userCreator = userCreator;
